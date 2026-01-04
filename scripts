@@ -1,1 +1,40 @@
+system_monitor.sh
+==========================
+
+#!/bin/bash
+DATE=$(date +"%Y-%m-%d %H:%M:%S")
+
+{
+  echo "===== SYSTEM REPORT : $DATE ====="
+  echo "--- CPU & Memory ---"
+  top -b -n1 | head -n 15
+  echo "--- Disk Usage ---"
+  df -h
+  echo "--- Top Processes ---"
+  ps aux --sort=-%mem | head -n 10
+  echo "================================"
+} >> /var/log/system_monitoring/system_report.log
+
+
+
+apache_backup.sh
+====================
+
+#!/bin/bash
+DATE=$(date +"%Y-%m-%d")
+BACKUP="/backups/apache_backup_$DATE.tar.gz"
+
+tar -czvf $BACKUP /etc/httpd /var/www/html
+tar -tzf $BACKUP >> /backups/apache_verify.log
+
+
+nginx_backup.sh
+=================
+
+#!/bin/bash
+DATE=$(date +"%Y-%m-%d")
+BACKUP="/backups/nginx_backup_$DATE.tar.gz"
+
+tar -czvf $BACKUP /etc/nginx /usr/share/nginx/html
+tar -tzf $BACKUP >> /backups/nginx_verify.log
 
