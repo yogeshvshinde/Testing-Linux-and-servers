@@ -1,6 +1,9 @@
 
 
-Instaling Htop 
+**Instaling Htop** 
+
+
+
 
 
 
@@ -13,7 +16,7 @@ Instaling Htop
 
  
 
-Running htop command:
+**Running htop command:**
 
 
  
@@ -25,7 +28,10 @@ Running htop command:
 
 
 
-Running nmon command:
+**Running nmon command:**
+
+
+
 
 
 
@@ -36,7 +42,7 @@ Running nmon command:
 
 
  
-Running df command: 
+**Running df command:** 
 
 
 
@@ -48,7 +54,7 @@ Running df command:
 
  
 
-Running df- sh command:
+**Running df- sh command:**
 
 
 
@@ -66,7 +72,10 @@ Running df- sh command:
 
 
 
-System Metrics Logging (Reporting)x`
+**System Metrics Logging (Reporting)x`**
+
+
+
 
 
 
@@ -90,8 +99,15 @@ System Metrics Logging (Reporting)x`
 
 
 
-Create logging directory
-sudo mkdir -p /var/log/system_monitoring
+
+
+**Create logging directory
+sudo mkdir -p /var/log/system_monitoring**
+
+
+
+
+
 
  
 <img width="940" height="166" alt="image" src="https://github.com/user-attachments/assets/06e56eb5-10ee-472b-bea6-69661c3a0434" />
@@ -119,10 +135,14 @@ sudo mkdir -p /var/log/system_monitoring
 
  
 
-Task 2: User Management and Access Control
+**Task 2: User Management and Access Control
 
 sudo adduser sarah
-sudo adduser mike
+sudo adduser mike**
+
+
+
+
 
  
 <img width="838" height="126" alt="image" src="https://github.com/user-attachments/assets/d9027ca8-24cf-4b31-a36c-bad234cdf6f1" />
@@ -135,7 +155,21 @@ sudo adduser mike
  <img width="879" height="542" alt="image" src="https://github.com/user-attachments/assets/b7416656-48dd-490b-9f83-ff21a2d4990c" />
 
 
-Sudo nano etc/passwd output :
+
+
+
+
+
+
+**Sudo nano etc/passwd output :**
+
+
+
+
+
+
+
+
 
  <img width="940" height="674" alt="image" src="https://github.com/user-attachments/assets/468ed3d8-f1d9-4e5d-afc0-ee40c7d7c82f" />
 
@@ -145,17 +179,35 @@ Sudo nano etc/passwd output :
 <img width="940" height="209" alt="image" src="https://github.com/user-attachments/assets/3f0e710e-7b25-4b6f-b9b2-27657e8617a9" />
 
 
-sudo chown -R sarah:sarah /home/sarah/workspace
-sudo chown -R mike:mike /home/mike/workspace
+
+
+
+
+
+**sudo chown -R sarah:sarah /home/sarah/workspace
+sudo chown -R mike:mike /home/mike/workspace**
+
+
+
+
 
 
 
 <img width="940" height="95" alt="image" src="https://github.com/user-attachments/assets/70a5279a-a89a-499a-89b2-ca7caa57ea4e" />
 
- 
+
+
+
+
+
+** 
 sudo chmod 700 /home/sarah/workspace
-sudo chmod 700 /home/mike/workspace
+sudo chmod 700 /home/mike/workspace**
  
+
+
+
+
 
  <img width="940" height="180" alt="image" src="https://github.com/user-attachments/assets/a1067054-a6a4-4204-8dac-80378dafa0bf" />
 
@@ -164,9 +216,16 @@ sudo chmod 700 /home/mike/workspace
  <img width="847" height="104" alt="image" src="https://github.com/user-attachments/assets/ae15c833-9ff3-4e06-af30-f0521719bc00" />
 
 
-Password Expiry Policy (30 Days):
+
+
+
+
+**Password Expiry Policy (30 Days):
 sudo chage -M 30 sarah
-sudo chage -M 30 mike
+sudo chage -M 30 mike**
+
+
+
 
  
 
@@ -177,8 +236,17 @@ sudo chage -M 30 mike
 
 
 
-Enforce Password Complexity :
-sudo nano /etc/pam.d/common-password
+
+
+
+
+
+**Enforce Password Complexity :
+sudo nano /etc/pam.d/common-password**
+
+
+
+
 
  
 <img width="940" height="493" alt="image" src="https://github.com/user-attachments/assets/d2e07b29-8aa4-4122-ae46-15cea35ab05c" />
@@ -186,14 +254,20 @@ sudo nano /etc/pam.d/common-password
 
 
 
-Task 3: Automated Backup Configuration : 
+**Task 3: Automated Backup Configuration : **
+
+
+
 
 
 <img width="917" height="169" alt="image" src="https://github.com/user-attachments/assets/797930ba-2e8c-4053-8c5c-ad97948594b2" />
 
 
  
-Apache Backup Script (Sarah) : 
+**Apache Backup Script (Sarah) : **
+
+
+
  
  
 <img width="940" height="365" alt="image" src="https://github.com/user-attachments/assets/749d37cb-0927-4306-addc-e0e660ab627a" />
@@ -204,13 +278,22 @@ Apache Backup Script (Sarah) :
 <img width="940" height="181" alt="image" src="https://github.com/user-attachments/assets/027e6b42-ccd2-4631-84f6-bc49567910e9" />
 
 
+
+
+
+
  
-Nginx Backup Script (Mike):
+**Nginx Backup Script (Mike):
 
 
 
 
-sudo nano /usr/local/bin/nginx_backup.sh
+sudo nano /usr/local/bin/nginx_backup.sh**
+
+
+
+
+
 
  <img width="726" height="238" alt="image" src="https://github.com/user-attachments/assets/050e3c32-f775-4e98-b563-232baf0c4b01" />
 
@@ -220,7 +303,14 @@ sudo nano /usr/local/bin/nginx_backup.sh
 
 
 
-Cron Job Configuration (Tuesday 12:00 AM) :
+
+
+
+**Cron Job Configuration (Tuesday 12:00 AM) :**
+
+
+
+
 
  
 <img width="923" height="325" alt="image" src="https://github.com/user-attachments/assets/bfdd52ab-ee7a-4259-8f57-df19e584c55d" />
@@ -240,135 +330,14 @@ Cron Job Configuration (Tuesday 12:00 AM) :
 
  
 
-Manual Verification: sudo /usr/local/bin/apache_backup.sh
+**Manual Verification: sudo /usr/local/bin/apache_backup.sh
 sudo /usr/local/bin/nginx_backup.sh
 
 ls -lh /backups
 cat /backups/apache_verify.log
-cat /backups/nginx_verify.log
+cat /backups/nginx_verify.log**
 
 
-
-
-
-
-
-
-Running htop command:
-
-
-
-Running nmon command:
-
-
-
-
-Running df command: 
-
-
-
-Running df- sh command:
-
-
-
-
-
-
-
-
-System Metrics Logging (Reporting)
-Create logging directory
-sudo mkdir -p /var/log/system_monitoring
-
-
-
-
-
-
-
-
-
-
-
-
-
-Task 2: User Management and Access Control
-
-sudo adduser sarah
-sudo adduser mike
-
-
-
-
-
-
-
-Sudo nano etc/passwd output :
-
-
-
-
-
-
-sudo chown -R sarah:sarah /home/sarah/workspace
-sudo chown -R mike:mike /home/mike/workspace
-
-
-sudo chmod 700 /home/sarah/workspace
-sudo chmod 700 /home/mike/workspace
-
-
-
-
-
-
-Password Expiry Policy (30 Days):
-sudo chage -M 30 sarah
-sudo chage -M 30 mike
-
-
-
-
-
-
-Enforce Password Complexity :
-sudo nano /etc/pam.d/common-password
-
-
-
-
-Task 3: Automated Backup Configuration : 
-
-
-Apache Backup Script (Sarah) : 
-
-
-
-
-Nginx Backup Script (Mike):
-
-sudo nano /usr/local/bin/nginx_backup.sh
-
-
-
-
-
-Cron Job Configuration (Tuesday 12:00 AM) :
-
-
-
-
-
-
-
-
-
-Manual Verification: sudo /usr/local/bin/apache_backup.sh
-sudo /usr/local/bin/nginx_backup.sh
-
-ls -lh /backups
-cat /backups/apache_verify.log
-cat /backups/nginx_verify.log
 
 
 
